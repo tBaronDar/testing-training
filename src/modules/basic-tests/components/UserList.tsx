@@ -1,5 +1,5 @@
 import React from "react";
-import type { User } from "../App";
+import type { User } from "../../../App";
 
 export type UserListProps = {
 	users: Array<User>;

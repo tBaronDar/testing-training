@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import type { User } from "../App";
+import type { User } from "../../../App";
 
 interface UserFormProps {
 	onUserAdd: (user: User) => void;
