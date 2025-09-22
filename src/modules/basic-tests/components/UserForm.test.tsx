@@ -31,7 +31,7 @@ describe("test the form", () => {
 		await user.click(nameInput);
 		await user.keyboard("John Doe");
 
-		await user.type(emailInput, "john@gmail.com"); //don;t forget await
+		await user.type(emailInput, "john@gmail.com"); //don;t forget to await
 
 		//simulate form submission
 		const button = screen.getByRole("button");

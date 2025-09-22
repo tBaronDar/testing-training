@@ -1,11 +1,13 @@
 import { Outlet } from "react-router-dom";
 
+import styles from "./main-layout.module.css";
+import Drawer from "./drawer";
+
 export default function MainLayout() {
 	return (
-		<div>
-			<h1>Main Layout</h1>
+		<div className={styles.container}>
+			<Drawer />
 			<hr />
-			{/* This is where child routes will be rendered */}
 			<Outlet />
 		</div>
 	);
