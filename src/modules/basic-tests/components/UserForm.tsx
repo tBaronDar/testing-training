@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import type { User } from "../../../App";
+import type { User } from "../types";
 
 interface UserFormProps {
 	onUserAdd: (user: User) => void;
@@ -20,15 +20,14 @@ const UserForm: React.FC<UserFormProps> = (props: UserFormProps) => {
 	return (
 		<form onSubmit={handleSubmit}>
 			<div>
-				<label>
-					Name:
-					<input
-						type="text"
-						value={name}
-						onChange={(e) => setName(e.target.value)}
-						required
-					/>
-				</label>
+				<label htmlFor="name">Name:</label>
+				<input
+					id="name"
+					type="text"
+					value={name}
+					onChange={(e) => setName(e.target.value)}
+					required
+				/>
 			</div>
 			<div>
 				<label>
