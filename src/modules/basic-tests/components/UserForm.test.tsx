@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import user from "@testing-library/user-event";
+import user, { userEvent } from "@testing-library/user-event"; //simulates user events, it is legacy but still useful
 import UserForm from "./UserForm";
 import { describe, it, expect, vi } from "vitest";
 
@@ -43,5 +43,22 @@ describe("test the form", () => {
 			name: "John Doe",
 			email: "john@gmail.com",
 		});
+	});
+
+	it("checks that the inputs are cleared after submission", async () => {
+		render(<UserForm onUserAdd={() => {}} />);
+
+		const nameInput = screen.getByLabelText(/name/i);
+		const emailInput = screen.getByLabelText(/email/i);
+		const button = screen.getByRole("button");
+
+		const user = userEvent.setup();
+
+		await user.type(nameInput, "John Doe");
+		await user.type(emailInput, "test@gmail.com");
+		await user.click(button);
+
+		expect(nameInput).toHaveValue("");
+		expect(emailInput).toHaveValue("");
 	});
 });
