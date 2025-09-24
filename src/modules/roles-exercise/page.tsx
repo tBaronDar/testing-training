@@ -1,4 +1,6 @@
-export default function RolesExercise() {
+import AccessibleNameExercise from "./components/accessible-name-ex";
+import RolesExercise from "./components/roles-exercise";
+export default function RolesExercisePage() {
 	return (
 		<div>
 			<div>
@@ -18,27 +20,13 @@ export default function RolesExercise() {
 					</a>
 				</p>
 				<p>
-					The rtl-book is a small framework that allows you to run React Testing
-				</p>
-				<p>
 					To run the notebook with existing notes use the same file name, in
-					this case rtl-notes.js. Below starts the code of the exercise.
+					this case rtl-notes.js. Below starts the code of the exercise check
+					code to understand this nonsence.
 				</p>
 			</div>
-			<div data-testid="roles-exercise">
-				<a href="/#">Link</a>
-				<button>Button</button>
-				<header>Banner</header>
-				<footer>ContentInfo</footer>
-				<h1>Heading</h1>
-				<img alt="description" /> Img
-				<input type="checkbox" /> Checkbox
-				<input type="number" /> Spinbutton
-				<input type="radio" /> Radio
-				<input type="text" /> Textbox
-				<ul>Listgroup</ul>
-				<li>Listitem</li>
-			</div>
+			<RolesExercise />
+			<AccessibleNameExercise />
 		</div>
 	);
 }
