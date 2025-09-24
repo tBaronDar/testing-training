@@ -1,7 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import MainLayout from "../shared/main-layout";
 import BasicTestsPage from "../modules/basic-tests/page";
-import MoreTestsPage from "../modules/more-tests/page";
+import RolesExercise from "../modules/roles-exercise/page";
 
 export default function createRouter() {
 	return createBrowserRouter([
@@ -17,7 +17,7 @@ export default function createRouter() {
 					path: "basic-tests",
 					element: <BasicTestsPage />,
 				},
-				{ path: "more-tests", element: <MoreTestsPage /> },
+				{ path: "more-tests", element: <RolesExercise /> },
 			],
 		},
 		{
